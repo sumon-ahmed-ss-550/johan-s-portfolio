@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mejbahul Hassan - Portfolio & Professional Resume</title>
-  
+
   <!-- External Modular Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <!-- External Modular JavaScript -->
   <script src="script.js" defer></script>
 </head>
+
 <body>
 
   <!-- ================= WEBSITE TOP NAVBAR ================= -->
@@ -30,26 +32,41 @@
 
     <div class="nav-actions">
       <!-- Direct Download Button with Date/Year Filename -->
-      <button class="btn btn-primary" onclick="downloadDynamicPDF()" title="Click to download PDF with timestamped filename">
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <button class="btn btn-primary" onclick="downloadDynamicPDF()"
+        title="Click to download PDF with timestamped filename">
+        <svg viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
         <span>Download PDF</span>
       </button>
 
       <!-- Print Button with Native Browser Print Dialog -->
       <button class="btn btn-secondary" onclick="printCV()" title="Print directly or save as PDF">
-        <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+        <svg viewBox="0 0 24 24">
+          <polyline points="6 9 6 2 18 2 18 9" />
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+          <rect width="12" height="8" x="6" y="14" />
+        </svg>
         <span>Print Document</span>
       </button>
 
       <!-- Email Contact Button -->
       <a href="mailto:mejbahulhassan339@gmail.com" class="btn btn-contact" title="Send email to Mejbahul Hassan">
-        <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg viewBox="0 0 24 24">
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
         <span>Email</span>
       </a>
 
       <!-- Phone Call Button -->
       <a href="tel:+8801722909959" class="btn btn-contact" title="Call Mejbahul Hassan">
-        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
         <span>Call</span>
       </a>
     </div>
@@ -64,7 +81,10 @@
         <span>Curriculum Vitae / Resume</span>
       </div>
       <div class="filename-indicator" id="filenameDisplay">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+        </svg>
         <span id="displayFilenameText">Generating filename...</span>
       </div>
     </div>
@@ -86,15 +106,24 @@
             </div>
             <div class="contact-bar">
               <a href="tel:+8801722909959" class="contact-chip">
-                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
                 <span>+880 1722-909959</span>
               </a>
               <a href="mailto:mejbahulhassan339@gmail.com" class="contact-chip">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
                 <span>mejbahulhassan339@gmail.com</span>
               </a>
               <div class="contact-chip">
-                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
                 <span>Shaheen Bagh, Tejgaon, Dhaka</span>
               </div>
             </div>
@@ -108,7 +137,10 @@
             <!-- Personal Details -->
             <section class="section sec-personal">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg></span>
                 Personal Details
               </h2>
               <table class="info-table">
@@ -150,12 +182,17 @@
             <!-- Residential Address -->
             <section class="section sec-address">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                  </svg></span>
                 Residential Address
               </h2>
               <div class="addr-box">
                 <div class="addr-tag">
-                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                  </svg>
                   Present Address
                 </div>
                 <div class="addr-text">
@@ -164,7 +201,9 @@
               </div>
               <div class="addr-box">
                 <div class="addr-tag">
-                  <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg>
+                  <svg viewBox="0 0 24 24">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  </svg>
                   Permanent Address
                 </div>
                 <div class="addr-text">
@@ -176,49 +215,68 @@
             <!-- Computer & Technical Skills -->
             <section class="section sec-skills">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg></span>
                 Computer Skills
               </h2>
               <div class="skill-list">
                 <div class="skill-row">
                   <div class="skill-meta">
                     <span class="skill-title">
-                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       Microsoft Word
                     </span>
                     <span class="skill-score">Advanced (95%)</span>
                   </div>
-                  <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%;"></div>
+                  </div>
                 </div>
                 <div class="skill-row">
                   <div class="skill-meta">
                     <span class="skill-title">
-                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       Microsoft Excel
                     </span>
                     <span class="skill-score">Proficient (85%)</span>
                   </div>
-                  <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%;"></div>
+                  </div>
                 </div>
                 <div class="skill-row">
                   <div class="skill-meta">
                     <span class="skill-title">
-                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       Microsoft PowerPoint
                     </span>
                     <span class="skill-score">Advanced (90%)</span>
                   </div>
-                  <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                  </div>
                 </div>
                 <div class="skill-row">
                   <div class="skill-meta">
                     <span class="skill-title">
-                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
                       Documentation & Typing
                     </span>
                     <span class="skill-score">Skilled (90%)</span>
                   </div>
-                  <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%;"></div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -226,7 +284,12 @@
             <!-- Language Proficiency -->
             <section class="section sec-languages">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg></span>
                 Language Proficiency
               </h2>
               <div class="lang-item">
@@ -235,14 +298,17 @@
               </div>
               <div class="lang-item">
                 <span class="lang-name">English</span>
-                <span class="lang-prof">Working Professional</span>
+                <span class="lang-prof">Conversational</span>
               </div>
             </section>
 
             <!-- Academic & Professional Focus -->
             <section class="section sec-focus">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg></span>
                 Key Focus Areas
               </h2>
               <div class="interest-wrap">
@@ -259,18 +325,30 @@
             <!-- Career Objective -->
             <section class="section sec-objective">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="16" y1="13" x2="8" y2="13" />
+                    <line x1="16" y1="17" x2="8" y2="17" />
+                  </svg></span>
                 Career Objective & Profile
               </h2>
               <div class="profile-card">
-                Dedicated and disciplined Law (LL.B) undergraduate with certified competence in Microsoft Office applications (Word, Excel, PowerPoint). Combines strong analytical acumen, formal legal drafting awareness, and excellent computer fluency. Seeking an opportunity in a reputed organization where I can leverage my office automation and digital documentation skills, contribute constructively toward administrative excellence, and advance long-term career growth.
+                Dedicated and disciplined Law (LL.B) undergraduate with certified competence in Microsoft Office
+                applications (Word, Excel, PowerPoint). Combines strong analytical acumen, formal legal drafting
+                awareness, and excellent computer fluency. Seeking an opportunity in a reputed organization where I can
+                leverage my office automation and digital documentation skills, contribute constructively toward
+                administrative excellence, and advance long-term career growth.
               </div>
             </section>
 
             <!-- Educational Background -->
             <section class="section sec-education">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg></span>
                 Educational Background
               </h2>
               <div class="edu-timeline">
@@ -319,7 +397,10 @@
             <!-- Training & Certifications -->
             <section class="section sec-training">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="7" />
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                  </svg></span>
                 Training & Certifications
               </h2>
               <div class="course-card">
@@ -329,7 +410,8 @@
                 </div>
                 <div class="course-inst">Institute: Boirati Information & Communication Technology</div>
                 <div class="course-desc">
-                  Hands-on technical curriculum focused on advanced document drafting, legal layout formatting, spreadsheet formulas, data analysis, and professional slide presentation development.
+                  Hands-on technical curriculum focused on advanced document drafting, legal layout formatting,
+                  spreadsheet formulas, data analysis, and professional slide presentation development.
                 </div>
               </div>
             </section>
@@ -337,23 +419,39 @@
             <!-- Core Competencies -->
             <section class="section sec-competencies">
               <h2 class="sec-title">
-                <span class="sec-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+                <span class="sec-icon"><svg viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg></span>
                 Core Competencies & Key Strengths
               </h2>
               <div class="comp-badges">
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Legal & Official Drafting</div>
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Fast Typing (Bangla & English)</div>
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Spreadsheet Data Management</div>
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Quick Learner & Adaptable</div>
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> High Accuracy & Detail-Oriented</div>
-                <div class="comp-pill"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Office Automation & Records</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> Legal & Official Drafting</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> Fast Typing (Bangla & English)</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> Spreadsheet Data Management</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> Quick Learner & Adaptable</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> High Accuracy & Detail-Oriented</div>
+                <div class="comp-pill"><svg viewBox="0 0 24 24">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg> Office Automation & Records</div>
               </div>
             </section>
 
             <!-- Declaration -->
             <div class="decl-section sec-declaration">
               <div class="decl-text">
-                "I hereby declare that all the information provided above is correct, accurate, and complete to the best of my knowledge and belief."
+                "I hereby declare that all the information provided above is correct, accurate, and complete to the best
+                of my knowledge and belief."
                 <div class="decl-meta">Place: Dhaka, Bangladesh</div>
               </div>
               <div class="sig-block">
@@ -368,34 +466,54 @@
 
   <!-- ================= WEBSITE FOOTER ================= -->
   <footer class="site-footer">
-    &copy; <span id="currentYear"></span> Mejbahul Hassan &bull; Law Student &amp; Office Automation Specialist &bull; All Rights Reserved.
+    &copy; <span id="currentYear"></span> Mejbahul Hassan &bull; Law Student &amp; Office Automation Specialist &bull;
+    All Rights Reserved.
   </footer>
 
   <!-- ================= FLOATING ACTION BUTTON (DESKTOP / TABLET) ================= -->
   <button class="floating-download-btn" onclick="downloadDynamicPDF()" title="Click to download PDF">
-    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <svg viewBox="0 0 24 24">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
     <span>Download PDF</span>
   </button>
 
   <!-- ================= MOBILE BOTTOM APP BAR (PHONES ONLY) ================= -->
   <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
     <button class="mobile-bar-btn mobile-bar-btn-primary" onclick="downloadDynamicPDF()" title="Download PDF">
-      <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <svg viewBox="0 0 24 24">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+        <polyline points="7 10 12 15 17 10" />
+        <line x1="12" y1="15" x2="12" y2="3" />
+      </svg>
       <span>Download</span>
     </button>
     <a href="tel:+8801722909959" class="mobile-bar-btn" title="Call">
-      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+      </svg>
       <span>Call</span>
     </a>
     <a href="mailto:mejbahulhassan339@gmail.com" class="mobile-bar-btn" title="Email">
-      <svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      <svg viewBox="0 0 24 24">
+        <rect width="20" height="16" x="2" y="4" rx="2" />
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </svg>
       <span>Email</span>
     </a>
     <button class="mobile-bar-btn" onclick="printCV()" title="Print CV">
-      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+      <svg viewBox="0 0 24 24">
+        <polyline points="6 9 6 2 18 2 18 9" />
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+        <rect width="12" height="8" x="6" y="14" />
+      </svg>
       <span>Print</span>
     </button>
   </nav>
 
 </body>
+
 </html>
