@@ -904,6 +904,20 @@ body::before {
 
 .sig-block {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sig-script {
+  font-size: 13.5px;
+  color: #1e40af;
+  line-height: 1;
+  margin-bottom: 2px;
+  letter-spacing: 0.5px;
+  user-select: none;
+  display: inline-block;
+  transform: rotate(-2deg);
 }
 
 .sig-line {
@@ -912,7 +926,6 @@ body::before {
   color: var(--text-primary);
   border-top: 1.5px solid var(--text-secondary);
   padding-top: 1.5mm;
-  margin-top: 4.5mm;
   display: inline-block;
   min-width: 34mm;
 }
@@ -1295,11 +1308,20 @@ body::before {
 
   .sig-block {
     align-self: flex-start;
+    align-items: flex-start;
+  }
+
+  .sig-script {
+    font-size: 19px !important;
+    color: #2563eb !important;
+    margin-bottom: 3px !important;
   }
 
   .sig-line {
     font-size: 13px !important;
-    margin-top: 8px !important;
+    margin-top: 0 !important;
+    padding-top: 5px !important;
+    min-width: 140px !important;
   }
 }
 
@@ -1876,9 +1898,27 @@ body::before {
     max-width: 62% !important;
   }
 
+  .sig-block {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .sig-script {
+    font-size: 13px !important;
+    color: #1e40af !important;
+    line-height: 1 !important;
+    margin-bottom: 1.5px !important;
+    display: inline-block !important;
+    transform: rotate(-1.5deg) !important;
+  }
+
   .sig-line {
     font-size: 9.5px !important;
-    margin-top: 4.5mm !important;
+    margin-top: 0 !important;
+    padding-top: 1.5mm !important;
+    min-width: 34mm !important;
   }
 
   @page {
