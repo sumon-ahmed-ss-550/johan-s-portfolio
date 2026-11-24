@@ -161,11 +161,19 @@
     }
 
     .btn svg {
-      width: 16px;
-      height: 16px;
-      stroke-width: 2.2;
-      fill: none;
+      width: 17px;
+      height: 17px;
+      stroke: currentColor !important;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none !important;
       flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover svg {
+      transform: scale(1.15);
     }
 
     /* Primary Download / Print Button */
@@ -861,6 +869,46 @@
       min-width: 34mm;
     }
 
+    /* ================= FLOATING ACTION BUTTON ================= */
+    .floating-download-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 99;
+      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+      color: #ffffff;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      padding: 11px 20px;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .floating-download-btn svg {
+      width: 17px;
+      height: 17px;
+      stroke: currentColor !important;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none !important;
+      flex-shrink: 0;
+    }
+
+    .floating-download-btn:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 12px 32px rgba(37, 99, 235, 0.65);
+      border-color: var(--accent-cyan);
+    }
+
     /* ================= FOOTER ================= */
     .site-footer {
       text-align: center;
@@ -884,7 +932,8 @@
       }
       .site-nav,
       .doc-toolbar,
-      .site-footer {
+      .site-footer,
+      .floating-download-btn {
         display: none !important;
       }
       .site-main {
@@ -929,20 +978,26 @@
     <div class="nav-actions">
       <!-- Direct Download Button with Date/Year Filename -->
       <button class="btn btn-primary" onclick="downloadDynamicPDF()" title="Click to download PDF with timestamped filename">
-        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         <span>Download PDF</span>
       </button>
 
       <!-- Print Button with Native Browser Print Dialog -->
       <button class="btn btn-secondary" onclick="printCV()" title="Print directly or save as PDF">
-        <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
         <span>Print Document</span>
       </button>
 
-      <!-- Contact Button -->
-      <a href="mailto:mejbahulhassan339@gmail.com" class="btn btn-contact">
-        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span>Contact</span>
+      <!-- Email Contact Button -->
+      <a href="mailto:mejbahulhassan339@gmail.com" class="btn btn-contact" title="Send email to Mejbahul Hassan">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span>Email</span>
+      </a>
+
+      <!-- Phone Call Button -->
+      <a href="tel:+8801722909959" class="btn btn-contact" title="Call Mejbahul Hassan">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Call</span>
       </a>
     </div>
   </header>
@@ -1313,5 +1368,11 @@
       }, 2000);
     }
   </script>
+
+  <!-- Floating Download Action Button with Icon -->
+  <button class="floating-download-btn" onclick="downloadDynamicPDF()" title="Click to download PDF">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span>Download PDF</span>
+  </button>
 </body>
 </html>
